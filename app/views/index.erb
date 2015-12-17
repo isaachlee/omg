@@ -10,7 +10,7 @@
 
 <div class="container">
   <%if current_user  %>
-    <h1>Logged in as <%=@current_user.username %></h1>
+    <h1 class="jumbotron">Logged in as <%=@current_user.username %></h1>
     <a class='popup_form' id='show_edit_user_form' href='/users/<%=current_user.id%>/edit'>Edit User</a>
     <a id='log_out' href='/sessions/<%=current_user.id%>'>Log Out</a>
   <%else  %>
@@ -25,13 +25,13 @@
   <form method = "post" action = "/text">
     <label for = "text"> Original Message: </label>
     <textarea name = "text"> </textarea>
-    <input type="submit"> </input>
+    <input type="submit" class= 'btn btn-info'> </input>
   </form>
 </div>
 
 
 <%if @translated_string %>
 <div class = "container">
-  <%= @translated_string %>
+  <p><%= @translated_string %></p>
 </div>
 <% end %>

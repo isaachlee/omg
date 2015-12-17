@@ -10,6 +10,8 @@ gem 'sinatra-contrib'
 # Use Thin for our web server
 # gem 'thin'
 
+gem 'rest-open-uri'
+gem 'rest-client'
 gem 'byebug'
 gem 'activesupport', '~>4.1'
 gem 'activerecord', '~>4.1'
