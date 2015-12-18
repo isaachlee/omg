@@ -1,16 +1,11 @@
 #create new session page
-get '/sessions/new' do 
-	if request.xhr?
-		erb :'/sessions/_session_new', layout: false
-	else
-		status 403
-		redirect '/'
-	end
+get '/sessions/new' do
+		erb :'/sessions/_session_new'
 end
 
 
 #login to session
-post '/sessions' do 
+post '/sessions' do
 	user = User.find_by(email: params[:email])
 	if user && user.password = params[:password]
 		session[:id] = user.id
@@ -25,14 +20,9 @@ end
 
 #delete session
 delete '/sessions/:id' do
-	if request.xhr?
-		current_user = nil
-		session[:id] = nil
-		redirect '/'
-	else
-		status 403
-		redirect '/'
-	end
+	current_user = nil
+	session[:id] = nil
+	redirect '/'
 end
 
 

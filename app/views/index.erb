@@ -9,6 +9,7 @@
 <%end %>
 
 <div class="container">
+
   <%if current_user  %>
     <h1 class="jumbotron" style="text-align:center">HELR <%=@current_user.username.upcase %>!</h1>
 
@@ -44,8 +45,8 @@
     </div>
 
   <%else%>
-  <a class='popup_form' id='show_new_user_form' href='/users/new'>Create User</a>
-  <a class='popup_form' id='show_log_in_form' href='/sessions/new'>Log In</a>
+  <a class='popup_form btn btn-primary btn-sm' id='show_new_user_form' href='/users/new'>Create User</a>
+  <a class='popup_form btn btn-danger btn-sm pull-right' id='show_log_in_form' href='/sessions/new'>Log In</a>
   <%end%>
 
   <div class="show_form">

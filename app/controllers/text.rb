@@ -1,6 +1,7 @@
 
 get '/text' do
   @translated_string
+
   erb :index
 end
 
@@ -23,12 +24,23 @@ post '/text' do
       # leet_word << to_leet(letter)
     # end
     # translated_array << leet_word.join('')
-  # end
-  # @translated_string = translated_array.join(" ")
-  translated_array << translate_omg(word)
-  @translated_string = translated_array.join(" ")
-  @destination_number = params[:phone_number]
+    # end
+    # @translated_string = translated_array.join(" ")
+    translated_array << translate_omg(word)
+    @translated_string = translated_array.join(" ")
+
   end
+
+  @destination_number = "+" + params[:phone_number]
+  account_sid = ENV["ACCOUNT_SID"]
+  auth_token = ENV["AUTH_TOKEN"]
+  @client = Twilio::REST::Client.new account_sid, auth_token
+
+  @client.account.messages.create({
+    :from => ENV["PHONE_NUMBER"],
+    :to => @destination_number,
+    :body => @translated_string
+    })
 
 
 #word array

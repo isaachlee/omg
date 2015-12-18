@@ -10,6 +10,11 @@ require 'bundler/setup' if File.exists?(ENV['BUNDLE_GEMFILE'])
 require 'rubygems'
 require 'byebug'
 require 'uri'
+
+require 'twilio-ruby'
+require 'dotenv'
+Dotenv.load
+#^necessary for .env
 require 'pathname'
 
 require 'json'
