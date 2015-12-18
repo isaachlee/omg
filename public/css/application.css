@@ -15,6 +15,22 @@ th {
 body {
     background-color: #FDFDF0;
 }
- .jumbotron {
+
+.jumbotron {
+  font-size: 6em;
    background-color: #FDFDF0;
  }
+
+.form-pad{
+  padding: 2em 0 2em 0;
+}
+
+.form-marg{
+  margin: 2em 0 2em 0;
+}
+.top-marg{
+  margin-top: 2em
+}
+.top-marg-sm{
+  margin-top: 1em
+}

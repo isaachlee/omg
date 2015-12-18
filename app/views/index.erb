@@ -11,11 +11,29 @@
 <div class="container">
   <%if current_user  %>
     <h1 class="jumbotron" style="text-align:center">HELR <%=@current_user.username.upcase %>!</h1>
-    <div class="tpbutton btn-toolbar">
+
+    <!-- <div class="btn-group open">
+      <a class="btn btn-primary" href="#"><i class="fa fa-user fa-fw"></i> User</a>
+      <a class="btn btn-primary dropdown-toggle" data-toggle="dropdown" href="#">
+        <span class="fa fa-caret-down"></span></a>
+      <ul class="dropdown-menu">
+        <li><a href="#"><i class="fa fa-pencil fa-fw"></i> Edit</a></li>
+        <li><a href="#"><i class="fa fa-trash-o fa-fw"></i> Delete</a></li>
+        <li><a href="#"><i class="fa fa-ban fa-fw"></i> Ban</a></li>
+        <li class="divider"></li>
+        <li><a href="#"><i class="i"></i> Make admin</a></li>
+      </ul>
+    </div> -->
+
+
+
+
+    <div class="tpbutton btn-toolbar form-marg">
       <!--  btn-group pull-right
       <form action='/users/<%#=current_user.id%>/edit' method='GET'>
         <input class='btn btn-warning' type="submit" value="edit">
       </form> -->
+
 
       <a class='popup_form btn btn-primary btn-sm' id='show_edit_user_form' href='/users/<%=current_user.id%>/edit'>Edit User</a>
 
@@ -37,16 +55,16 @@
 <div class = "container">
   <form method = "post" action = "/text">
 
-    <label for = "text"> What do you need to say?: </label>
+    <label for = "text" class="top-marg"> What do you need to say?: </label>
     <input type="text" name = "text" class= "form-control" placeholder="ERMAHGERD"> </input>
 
     <% if current_user %>
-      <label for ="phone_number"> Who do you want to text?</label>
-      <input type="number" name="phone_number" class="form-control" placeholder="1-800-867-5309"></input>
+      <label for ="phone_number" class="top-marg"> Who do you want to text?</label>
+      <input type="tel" name="phone_number" class="form-control" placeholder="1-800-867-5309"></input>
     <% end %>
 
 
-    <input type="submit" class= 'btn btn-success'> </input>
+    <input type="submit" class= 'btn btn-success top-marg-sm'> </input>
 
 
   </form>
@@ -55,9 +73,9 @@
 
 <%if @translated_string %>
 <div class = "container">
-  <p class="strong"><%= @translated_string %>
+  <h2 style="text-align:center"><%= @translated_string %></h2>
   <% if @destination_number %>
-    was sent to: <%= @destination_number %></p>
+    <div class="strong">was sent to: <%= @destination_number %></div>
   <% end %>
 </div>
 <% end %>
