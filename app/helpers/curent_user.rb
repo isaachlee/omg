@@ -56,44 +56,44 @@ helpers do
     case letter
     when 'A'
       return '4'
-    # when letter == 'B'
-    #   return '8'
-    # when letter == 'G'
-    #   return '9'
-    # when letter == 'I'
-    #   return '1'
-    # when letter == 'O'
-    #   return '0'
-    # when letter == 'S'
-    #   return '5'
-    # when letter == 'T'
-    #   return '7'
-    # when letter == 'Z'
-    #   return '2'
-    # when letter == 'E'
-    #   return '3'
-    # when letter == "U"
-      # return "µ"
-    # when letter == "C"
-    #   return "¢"
-    # when letter == "R"
-    #   return "®"
-    # when letter == "F"
-      # return "ƒ"
-    # when letter == "X"
-    #   return "><"
-    # when letter == "D"
-    #   return "Ð"
-    # when letter == "L"
-    #   return "£"
-    # when letter == "Y"
-    #   return "¥"
-    # when letter == "N"
-    #   return "ñ"
-    # when letter == "?"
-    #   return "¿"
-    # when letter == "¡"
-    #   return "i"
+    when 'B'
+      return '8'
+    when 'G'
+      return '9'
+    when 'I'
+      return '1'
+    when 'O'
+      return '0'
+    when 'S'
+      return '5'
+    when 'T'
+      return '7'
+    when 'Z'
+      return '2'
+    when 'E'
+      return '3'
+    when "U"
+      return "µ"
+    when "C"
+      return "¢"
+    when "R"
+      return "®"
+    when "F"
+      return "ƒ"
+    when "X"
+      return "><"
+    when "D"
+      return "Ð"
+    when "L"
+      return "£"
+    when "Y"
+      return "¥"
+    when "N"
+      return "ñ"
+    when "?"
+      return "¿"
+    when "¡"
+      return "i"
     else
       return letter
     end
