@@ -76,8 +76,6 @@ helpers do
       return "µ"
     when "C"
       return "¢"
-    when "R"
-      return "®"
     when "F"
       return "ƒ"
     when "X"
