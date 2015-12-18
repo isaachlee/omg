@@ -52,26 +52,26 @@ helpers do
     return word
   end
 
-  def to_leet(letter)
+  def leetspeak(letter)
     case letter
-    when letter == 'A'
+    when 'A'
       return '4'
-    when letter == 'B'
-      return '8'
-    when letter == 'G'
-      return '9'
-    when letter == 'I'
-      return '1'
-    when letter == 'O'
-      return '0'
-    when letter == 'S'
-      return '5'
-    when letter == 'T'
-      return '7'
-    when letter == 'Z'
-      return '2'
-    when letter == 'E'
-      return '3'
+    # when letter == 'B'
+    #   return '8'
+    # when letter == 'G'
+    #   return '9'
+    # when letter == 'I'
+    #   return '1'
+    # when letter == 'O'
+    #   return '0'
+    # when letter == 'S'
+    #   return '5'
+    # when letter == 'T'
+    #   return '7'
+    # when letter == 'Z'
+    #   return '2'
+    # when letter == 'E'
+    #   return '3'
     # when letter == "U"
       # return "µ"
     # when letter == "C"
