@@ -12,6 +12,7 @@ gem 'sinatra-contrib'
 
 gem 'rest-open-uri'
 gem 'rest-client'
+# ^ necessary for api requests
 gem 'byebug'
 gem 'activesupport', '~>4.1'
 gem 'activerecord', '~>4.1'

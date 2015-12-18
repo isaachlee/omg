@@ -11,8 +11,10 @@ require 'rubygems'
 require 'byebug'
 require 'uri'
 require 'pathname'
+
 require 'json'
 require 'rest-client'
+#^ also necessary for api requests
 require 'pg'
 require 'active_record'
 require 'logger'

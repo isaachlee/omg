@@ -2,7 +2,6 @@ enable :sessions
 use Rack::Flash
 
 get '/' do
-  @translate_string
-  erb :index
+  redirect '/text'
 end
 
