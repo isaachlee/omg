@@ -52,48 +52,48 @@ helpers do
     return word
   end
 
-  def to_leet(letter)
+  def leetspeak(letter)
     case letter
-    when letter == 'A'
+    when 'A'
       return '4'
-    when letter == 'B'
+    when 'B'
       return '8'
-    when letter == 'G'
+    when 'G'
       return '9'
-    when letter == 'I'
+    when 'I'
       return '1'
-    when letter == 'O'
+    when 'O'
       return '0'
-    when letter == 'S'
+    when 'S'
       return '5'
-    when letter == 'T'
+    when 'T'
       return '7'
-    when letter == 'Z'
+    when 'Z'
       return '2'
-    when letter == 'E'
+    when 'E'
       return '3'
-    # when letter == "U"
-      # return "µ"
-    # when letter == "C"
-    #   return "¢"
-    # when letter == "R"
-    #   return "®"
-    # when letter == "F"
-      # return "ƒ"
-    # when letter == "X"
-    #   return "><"
-    # when letter == "D"
-    #   return "Ð"
-    # when letter == "L"
-    #   return "£"
-    # when letter == "Y"
-    #   return "¥"
-    # when letter == "N"
-    #   return "ñ"
-    # when letter == "?"
-    #   return "¿"
-    # when letter == "¡"
-    #   return "i"
+    when "U"
+      return "µ"
+    when "C"
+      return "¢"
+    when "R"
+      return "®"
+    when "F"
+      return "ƒ"
+    when "X"
+      return "><"
+    when "D"
+      return "Ð"
+    when "L"
+      return "£"
+    when "Y"
+      return "¥"
+    when "N"
+      return "ñ"
+    when "?"
+      return "¿"
+    when "¡"
+      return "i"
     else
       return letter
     end
