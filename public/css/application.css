@@ -1,9 +1,36 @@
-.container {
+/*.container {
   margin: 20px auto;
   width: 600px;
   padding: 0px 20px 20px 20px;
   border: 1px dotted black;
-}
+}*/
 th {
   text-align: left;
+}
+
+.ft-lft{
+  float: left
+}
+
+body {
+    background-color: #FDFDF0;
+}
+
+.jumbotron {
+  font-size: 6em;
+   background-color: #FDFDF0;
+ }
+
+.form-pad{
+  padding: 2em 0 2em 0;
+}
+
+.form-marg{
+  margin: 2em 0 2em 0;
+}
+.top-marg{
+  margin-top: 2em
+}
+.top-marg-sm{
+  margin-top: 1em
 }
