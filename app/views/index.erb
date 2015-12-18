@@ -10,28 +10,54 @@
 
 <div class="container">
   <%if current_user  %>
-    <h1 class="jumbotron">Logged in as <%=@current_user.username %></h1>
-    <a class='popup_form' id='show_edit_user_form' href='/users/<%=current_user.id%>/edit'>Edit User</a>
-    <a id='log_out' href='/sessions/<%=current_user.id%>'>Log Out</a>
-  <%else  %>
+    <h1 class="jumbotron" style="text-align:center">HELR <%=@current_user.username.upcase %>!</h1>
+    <div class="tpbutton btn-toolbar">
+      <!--  btn-group pull-right
+      <form action='/users/<%#=current_user.id%>/edit' method='GET'>
+        <input class='btn btn-warning' type="submit" value="edit">
+      </form> -->
+
+      <a class='popup_form btn btn-primary btn-sm' id='show_edit_user_form' href='/users/<%=current_user.id%>/edit'>Edit User</a>
+
+      <form action='/sessions/<%=current_user.id%>' method='POST'>
+        <input type='hidden' name='_method' value='DELETE'>
+        <input class= 'btn btn-danger btn-sm pull-right' type='submit' value='Log Out'>
+      </form>
+    </div>
+
+  <%else%>
   <a class='popup_form' id='show_new_user_form' href='/users/new'>Create User</a>
   <a class='popup_form' id='show_log_in_form' href='/sessions/new'>Log In</a>
-  <%end %>
+  <%end%>
+
   <div class="show_form">
   </div>
 </div>
 
 <div class = "container">
   <form method = "post" action = "/text">
-    <label for = "text"> Original Message: </label>
-    <textarea name = "text"> </textarea>
-    <input type="submit" class= 'btn btn-info'> </input>
+
+    <label for = "text"> What do you need to say?: </label>
+    <input type="text" name = "text" class= "form-control" placeholder="ERMAHGERD"> </input>
+
+    <% if current_user %>
+      <label for ="phone_number"> Who do you want to text?</label>
+      <input type="number" name="phone_number" class="form-control" placeholder="1-800-867-5309"></input>
+    <% end %>
+
+
+    <input type="submit" class= 'btn btn-success'> </input>
+
+
   </form>
 </div>
 
 
 <%if @translated_string %>
 <div class = "container">
-  <p><%= @translated_string %></p>
+  <p class="strong"><%= @translated_string %>
+  <% if @destination_number %>
+    was sent to: <%= @destination_number %></p>
+  <% end %>
 </div>
 <% end %>

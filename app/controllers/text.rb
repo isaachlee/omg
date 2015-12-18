@@ -10,7 +10,7 @@ post '/text' do
   # @translated_string = []
   # website_friendly = text_array.join("%20")
   # @translated_string = RestClient.get "young-peak-8904.herokuapp.com/api/#{website_friendly}"
-
+  @destination_number = params[:number]
 
   text = params[:text].upcase
   translated_array = []
@@ -26,8 +26,8 @@ post '/text' do
     # translated_array << leet_word.join('')
   # end
   # @translated_string = translated_array.join(" ")
-
-  @translated_string = translate_omg(word)
+  translated_array << translate_omg(word)
+  @translated_string = translated_array.join(" ")
   end
 
 
