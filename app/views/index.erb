@@ -53,30 +53,31 @@
   </div>
 </div>
 
-<div class = "container">
-  <form method = "post" action = "/text">
+<% if current_user %>
+  <div class = "container">
+    <form method = "post" action = "/text">
 
-    <select name = "encode">
-      <option value="omg">ERMAHGERD</option>
-      <option value="leet">1337</option>
-      <option value="both">AWESOME</option>
-    </select>
+      <select name = "encode">
+        <option value="omg">ERMAHGERD</option>
+        <option value="leet">1337</option>
+        <option value="both">AWESOME</option>
+      </select>
 
-    <br>
-    <label for = "text" class="top-marg"> What do you need to say?: </label>
-    <input type="text" name = "text" class= "form-control" placeholder="ERMAHGERD"> </input>
+      <br>
+      <label for = "text" class="top-marg"> What do you need to say?: </label>
+      <input type="text" name = "text" class= "form-control" placeholder="ERMAHGERD"> </input>
+        <label for ="phone_number" class="top-marg"> Who do you want to text?</label>
+        <input type="tel" name="phone_number" class="form-control" placeholder="1-800-867-5309"></input>
+      <input type="submit" class= 'btn btn-success top-marg-sm'> </input>
 
-    <% if current_user %>
-      <label for ="phone_number" class="top-marg"> Who do you want to text?</label>
-      <input type="tel" name="phone_number" class="form-control" placeholder="1-800-867-5309"></input>
-    <% end %>
-
-
-    <input type="submit" class= 'btn btn-success top-marg-sm'> </input>
-
-
-  </form>
-</div>
+    </form>
+  </div>
+<% else %>
+  <h1 style="text-align:center">
+  <img align="middle" src="http://i2.kym-cdn.com/photos/images/facebook/000/276/060/10e.jpg" height="400" width="300" >
+  ER MAH GURD YOU NEED TO LERG IN
+  </h1>
+<% end %>
 
 
 <%if @translated_string %>
